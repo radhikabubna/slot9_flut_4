@@ -81,10 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
        Center(
         
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset('newapp\image\dice.png'),
+            
+            Image.asset('lib/image/dice.png'),
             Text(
               'RANDOM NUMBERS GENERATED',
               //style: TextStyle(fontWeight: FontWeight.bold),
