@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-var k;
 
 void main() => runApp(MyApp());
+var duration;
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
- 
-Widget build(BuildContext context) {
-  
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+      
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -22,13 +20,12 @@ Widget build(BuildContext context) {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.red
-        
+        primarySwatch: Colors.pink,//radhika
       ),
-      home: MyHomePage(title: 'GENERATION OF RANDOM NUMBERS'),
-      
+      home: MyHomePage(title: 'WELCOME TO THE GUIDE'),//radhika
     );
   }
+  
 }
 
 class MyHomePage extends StatefulWidget {
@@ -43,6 +40,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
+
   final String title;
 
   @override
@@ -50,9 +48,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-
-  void _incrementCounter() {
+ int _counter = 0;
+     void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -60,54 +57,250 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
     
-  var rng = new Random();
-  for (var i = 0; i < 10; i++) {
-    k=rng.nextInt(100);
+  _counter++;
     
-  }
-    });
-  }
+     });
+     }
+     //radhika
+ //@override
+//  Widget build(BuildContext context)
+// {
+//   return new Scaffold(
+//     body: new Container(
+//       padding: new EdgeInsets.all(32.0),
+//       child: new Center(
+//         child: new Column(children: <Widget>[
+//           new TextField(),
+//           new RaisedButton(onPressed: null),
+//           ],),
+//       ),
+//     ),
+//     );
+// }
 
-  @override
-  Widget build(BuildContext context) {
+
+  // void _incrementCounter() {
+  //   setState(() {
+  //     // This call to setState tells the Flutter framework that something has
+  //     // changed in this State, which causes it to rerun the build method below
+  //     // so that the display can reflect the updated values. If we changed
+  //     // _counter without calling setState(), then the build method would not be
+  //     // called again, and so nothing would appear to happen.
+  //     _counter++;
+  //   });
+  // }
+
+  // @override
+//   Widget bb(BuildContext context) {
    
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body:
-       Center(
-        
-        child: Column(
-          
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('newapp\image\dice.png'),
-            Text(
-              'RANDOM NUMBERS GENERATED',
-              //style: TextStyle(fontWeight: FontWeight.bold),
-              style: TextStyle(height: 20, fontSize: 25,fontWeight:FontWeight.bold),
-            ),
-            Text(
-              '$k',
-              //style: TextStyle(height: 20, fontSize: 25,fontWeight:FontWeight.bold),
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip:'Increment',
-        
-        child: Icon(Icons.thumb_up),
-        
-        backgroundColor: Colors.deepPurple,
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-
+//     return Container(
+//       color:Colors.blueAccent[100],
+//      height:150,
+//      width:150,
     
+     
+//     // width: 0,
+//      //height: 0,
+    
+//     child:
+   
+    
+//     Row(
+//   crossAxisAlignment: CrossAxisAlignment.start,
+// children: [
+  
+    
+//          // AspectRatio(
+//            // aspectRatio:1/2,
+//            Expanded(
+          
+//       child:Image.asset('lib/images/landscape1.jpg',width:250,height: 250)
+//             ),
+           
+//     //),
+//     //Expanded(
+//       Expanded(
+        
+//         flex:2,
+        
+      
+//       child: Image.asset('lib/images/landscape.png',width:250,height: 250),
+        
+//        ) ,
+//     //),S
+   
+//     Expanded(
+     
+//       child: Image.asset('lib/images/landscape2.jpg',width:250,height: 250),
+      
+//     ),
+//    //) ,
+//   ],
+   
+// ),
+
+
+// );
+//   }
+  @override//radhika
+  Widget build(BuildContext context){//radhika
+//   Widget titleSection=new Container(
+//    //padding: new EdgeInsets.all(10.0),
+   
+// //      //child: new Center(
+// //        // width: 10.0,
+//     child: new Row(
+//      // width:10.0,
+// //         (//mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+// //         //margin: const EdgeInsets.only(right: 10, left: 10),
+//           children: <Widget>[
+       
+//        TextField(
+//   obscureText: true,
+//   decoration: InputDecoration(
+//     border: OutlineInputBorder(),
+//     labelText: 'Password',
+//   ),
+// ),
+//             ] , ),      
+//   );  
+
+         
+//           ],
+//     ),   );
+
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(//radhika
+      
+     appBar: AppBar(//radhika
+      // Here we take the value from the MyHomePage object that was created by
+      // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),//radhika
+      ),
+      //radhika
+
+      body:Center(//radhika
+          child://radhika
+    
+      Container(//radhika
+     // width: 50.0,
+    //height:400.0,
+    color: Colors.black,//radhika
+    
+    alignment: Alignment.center,//radhika
+          child://radhika
+    
+      Container(//radhika
+     // width: 50.0,
+    height:500.0,//radhika
+    color: Colors.deepPurple,//radhika
+    
+    alignment: Alignment.center,//radhika
+     
+    child://radhika
+     Container(//radhika
+      
+        color:Colors.lightBlueAccent[200],//radhika
+     height:300,//radhika
+    
+    
+     
+    // width: 0,
+     //height: 0,
+    
+    child://radhika
+ 
+    
+    Row(//radhika
+  crossAxisAlignment: CrossAxisAlignment.start,//radhika
+children: [
+  //radhika
+    
+         // AspectRatio(
+           // aspectRatio:1/2,
+           Expanded(//radhika
+          
+      child:Image.asset('lib/images/landscape1.jpg',width:400,height: 400)//radhika
+            ),//radhika
+           
+    //),
+    //Expanded(
+      Expanded(//radhika
+        
+        flex:2,//radhika
+        
+      
+      child: Image.asset('lib/images/ff.jpg',width:400,height: 400),//radhika
+        
+       ) ,//radhika
+    //),S
+   
+    Expanded(//radhika
+     
+      child: Image.asset('lib/images/landscape2.jpg',width:400,height: 400),//radhika
+      
+    ),//radhika
+   //) ,
+  // titleSection
+  ],
+   
+),//radhika
+
+    ),//radhika
+    
+      ),//radhika
+      ),//radhika
+      ),
+      //radhika
+  // child: Column(
+    
+    //   //     mainAxisAlignment: MainAxisAlignment.center,
+    //   //     children: <Widget>[
+    //   //       Text(
+    //   //         'You have pushed the button this many times:',
+    //   //       ),
+    //   //       Text(
+    //   //         '$_counter',
+    //   //         style: Theme.of(context).textTheme.display1,
+    //   //       ),
+    //   //     ],
+    //   //   ),
+    //   // ),
+    floatingActionButton: FloatingActionButton(//radhika
+     onPressed:()//radhika
+     {
+       Navigator.push(context, //radhika
+       MaterialPageRoute(builder: (context)=>SecondRoute()));//radhika
+     },
+     //tooltip: 'Increment',//radhika
+     child: Icon(Icons.done),//radhika
+      backgroundColor: Colors.deepOrange,//radhika
+    ), 
+    // This trailing comma makes auto-formatting nicer for build methods.
+    );//radhika
+  }//radhika
+
+}//radhika
+class SecondRoute extends StatelessWidget {//radhika
+  @override//radhika
+  Widget build(BuildContext context) {//radhika
+    return Scaffold(//radhika
+      appBar: AppBar(//radhika
+        title: Text("Second Route"),//radhika
+      ),//radhika
+      body: Center(//radhika
+        child: RaisedButton(//radhika
+          onPressed: () {
+            Navigator.pop(context);//radhika
+          },//radhika
+          child: Text('Go back!'),//radhika
+        ),
+      ),//radhika
+    );
+  }//radhika
+}
